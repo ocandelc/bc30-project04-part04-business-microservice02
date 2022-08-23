@@ -1,7 +1,7 @@
 package com.nttdata.bootcamp.bank.product.springflux.controller;
 
-import com.nttdata.bootcamp.bank.product.model.document.Product;
-import com.nttdata.bootcamp.bank.product.service.inte.ProductServiceInte;
+import com.nttdata.bootcamp.bank.product.springdata.document.Product;
+import com.nttdata.bootcamp.bank.product.springwebflux.service.inte.ProductServiceInte;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
