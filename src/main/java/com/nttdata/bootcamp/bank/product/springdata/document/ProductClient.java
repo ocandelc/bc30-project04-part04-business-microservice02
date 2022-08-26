@@ -9,6 +9,7 @@
  * Modificaciones
  * Motivo                   Fecha             Nombre                  Descripción
  * ---------------------------------------------------------------------------------------------------------------------------
+ * Bootcamp-30              25/08/2022        Oscar Candela           Modificación de un campo.
  */
 package com.nttdata.bootcamp.bank.product.springdata.document;
 

@@ -9,6 +9,7 @@
  * Modificaciones
  * Motivo                   Fecha             Nombre                  Descripción
  * ---------------------------------------------------------------------------------------------------------------------------
+ * Bootcamp-30              25/08/2022        Mario Vásquez           Realizar la creación de un campo nuevo.
  */
 package com.nttdata.bootcamp.bank.product.springdata.document;
 

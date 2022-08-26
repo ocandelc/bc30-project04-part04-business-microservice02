@@ -9,6 +9,7 @@
  * Modificaciones
  * Motivo                   Fecha             Nombre                  Descripción
  * ---------------------------------------------------------------------------------------------------------------------------
+ * Bootcamp-30              25/08/2022        Oscar Candela           Modificación de la url.
  */
 package com.nttdata.bootcamp.bank.product.springwebflux.controller;
 
@@ -25,14 +26,14 @@ import reactor.core.publisher.Mono;
  * Clase de controller para invocar los métodos con rest api.
  */
 @RestController
-@RequestMapping("/api/personType")
+@RequestMapping("/api/business-microservice02-product/personType")
 public class PersonTypeRestController {
     private static final Logger log = LoggerFactory.getLogger(PersonTypeRestController.class);
 
     @Autowired
     private PersonTypeServiceInte personTypeServiceInte;
 
-    @PostMapping("create")
+    @PostMapping()
     public Mono<PersonType> create(@RequestBody final PersonType personType) {
         log.debug("Begin RestController create PersonType");
         return personTypeServiceInte.create(personType);
@@ -50,13 +51,13 @@ public class PersonTypeRestController {
         return personTypeServiceInte.findByCodeId(codePersonType);
     }
 
-    @PutMapping("update/{id}")
+    @PutMapping("/{id}")
     public Mono<PersonType> updateById(@RequestBody final PersonType personType, @PathVariable("id") final String id) {
         log.debug("Begin RestController updateById PersonType");
         return personTypeServiceInte.updateById(id, personType);
     }
 
-    @DeleteMapping("delete/{id}")
+    @DeleteMapping("/{id}")
     public Mono<Void> deleteById(@PathVariable final String id) {
         log.debug("Begin RestController deleteById PersonType");
         return personTypeServiceInte.deleteById(id);

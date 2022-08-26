@@ -25,7 +25,7 @@ import reactor.core.publisher.Mono;
  * Clase de controller para invocar los métodos con rest api.
  */
 @RestController
-@RequestMapping("/api/product")
+@RequestMapping("/api/business-microservice02-product/product")
 public class ProductRestController {
 
     private static final Logger log = LoggerFactory.getLogger(ProductRestController.class);
@@ -33,7 +33,7 @@ public class ProductRestController {
     @Autowired
     private ProductServiceInte productServiceInte;
 
-    @PostMapping("create")
+    @PostMapping
     public Mono<Product> create(@RequestBody final Product product) {
         log.debug("Begin RestController create Product");
         return productServiceInte.create(product);
@@ -51,13 +51,13 @@ public class ProductRestController {
         return productServiceInte.findByCodeProduct(codeProduct);
     }
 
-    @PutMapping("update/{id}")
+    @PutMapping("/{id}")
     public Mono<Product> updateById(@RequestBody final Product product, @PathVariable("id") final String id) {
         log.debug("Begin RestController updateById Product");
         return productServiceInte.updateById(id, product);
     }
 
-    @DeleteMapping("delete/{id}")
+    @DeleteMapping("/{id}")
     public Mono<Void> deleteById(@PathVariable final String id) {
         log.debug("Begin RestController deleteById Product");
         return productServiceInte.deleteById(id);
