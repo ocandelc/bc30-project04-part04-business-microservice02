@@ -41,7 +41,7 @@ public class ProductRestController {
 
     @GetMapping
     public Flux<Product> readAll() {
-        log.debug("Begin RestController readAll Product");
+        log.debug("Begin RestController readAll Product SonarCloud");
         return productServiceInte.readAll();
     }
 
